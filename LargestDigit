@@ -9,9 +9,9 @@ public class LargestDigit {
 		int num=sc.nextInt();
 		int largest=0;
 		while(num!=0) {
-			int ld=num%10;
-			if(largest<ld) {
-				largest=ld;
+			int digit=num%10;
+			if(largest<digit) {
+				largest=digit;
 			}
 			num=num/10;
 		}
