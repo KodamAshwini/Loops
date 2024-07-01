@@ -1,0 +1,21 @@
+import java.util.*;
+
+public class LargestDigit {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a Number:");
+		int num=sc.nextInt();
+		int largest=0;
+		while(num!=0) {
+			int ld=num%10;
+			if(largest<ld) {
+				largest=ld;
+			}
+			num=num/10;
+		}
+		System.out.println(largest);
+	}
+
+}
