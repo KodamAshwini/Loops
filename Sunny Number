@@ -1,0 +1,21 @@
+/*1> Write a Java program to determine whether a given integer number is a Sunny number. A number is called a sunny number if the number next to the given number is a perfect square. In other words, a number N will be a sunny number if N+1 is a perfect square.
+Example :  N=80 then N+1 will be 80+1=81, which is a perfect square of the number 9. Hence 80 is a sunny number.*/
+import java.util.*;
+class Sunny 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter a number:");
+		int n=s.nextInt();
+		int sr=(int)Math.sqrt(n+1);
+		if(sr*sr==n+1){
+			System.out.println("Sunny number");
+		}
+		else{
+			System.out.println("Not a Sunny number");
+		}
+
+
+	}
+}
