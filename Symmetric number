@@ -1,0 +1,63 @@
+import java.util.*;
+class Symmetric 
+{
+	public static int len(int num){
+		int c=0;
+		while(num!=0){
+			c++;
+		    num/=10;
+		}
+		return c;
+	}
+	private static int findN2(int num,int l){
+		int n2=0;
+		for(int i=1;i<=l/2;i++){
+			int d= num%10;
+			n2=n2*10+d;
+			num/=10;
+		}
+		return rev(n2);
+	}
+	private static int findN1(int num,int l){
+		for(int i=1;i<=l/2;i++){
+			num/=10;
+		}
+		return num; 
+	}
+
+
+	public static int rev(int num){
+		int rev=0;
+		while(num!=0){
+			int d=num%10;
+			rev=rev*10+d;
+			num/=10;
+		}
+		return rev;
+	}
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number:");
+		int n=sc.nextInt();
+		int l=len(n);
+		int temp=n;
+		if(n>0 && l%2==0){
+			int sum=0;
+			sum=sum+findN2(n,l)+findN1(n,l);
+			int sqe=sum*sum;
+			if(n==sqe){
+				System.out.println("Symmetric Power");
+			}
+			else{
+				System.out.println("Not Symmetric Power");
+			}
+		}
+		else{
+			System.out.println("invalid");
+		}
+
+
+	}
+
+}
