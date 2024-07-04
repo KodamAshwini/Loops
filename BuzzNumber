@@ -1,0 +1,16 @@
+/* Write a java program to find whether the given integer number in Buzz number or not. Buzz number is a number that ends with digit 7 or divisible by 7.
+Example :  42 is a Buzz number because it is divisible by 7.
+                   107 is a Buzz number because it ends with 7.*/
+import java.util.*;
+class BuzzNumber 
+{
+	public static void main(String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("Enter a number:");
+		int n=s.nextInt();
+		if(n%10==7 || n%7==0){
+			System.out.println("Buzz Number");
+		}
+	}
+}
