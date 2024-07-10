@@ -1,0 +1,18 @@
+/*products of Digits*/
+import java.util.Scanner;
+class ProdDigits 
+{
+	public static void main(String[] args) 
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter a number:");
+		int num=sc.nextInt();
+		int prod=1;
+		while(num!=0){
+			int ld=num%10;
+			prod*=ld;
+			num/=10;
+		}
+		System.out.println(prod);
+	}
+}
